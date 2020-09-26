@@ -2,13 +2,13 @@ import React from "react";
 
 // WIP
 function ToDoItem(props) {
-  const { text, completed } = props.item;
+  const { id, text, completed } = props.item;
   return (
     <div className="todo-item">
       <input
         type="checkbox"
         checked={completed}
-        onChange={() => console.log("changed!")}
+        onChange={() => props.onChange(id)}
       ></input>
       <p>{text}</p>
     </div>
